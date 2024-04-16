@@ -1,0 +1,501 @@
+/*Path only works if Module is in module contrib directory*/
+@import url(../../../../themes/contrib/gin/dist/css/theme/accent.css);
+@import url(gin-custom-bootstrap.css);
+
+/* Variables */
+/*************/
+:root {
+    --gin-border-color: #e7e7eb;
+    --gin-font-weight-bold: 500;
+    --gin-font-weight-semibold: 500;
+}
+
+/* Globals */
+/***********/
+
+.gin-bg-app,
+.claro-details summary {
+    background-color: var(--gin-bg-app);
+}
+
+.claro-details summary {
+    border-radius: var(--gin-border-m) !important;
+}
+
+
+html .toolbar-tray-horizontal ul li.menu-item--expanded.hover-intent ul {
+    width: 270px;
+}
+
+html .toolbar-tray-horizontal ul li.menu-item--expanded .menu-item.hover-intent ul {
+    margin-left: 267px;
+}
+
+#drupal-off-canvas-wrapper {
+    --off-canvas-background-color-light: #fff;
+    --off-canvas-background-color-medium: #444;
+    --off-canvas-background-color-dark: #333;
+    --off-canvas-background-color: var(--off-canvas-background-color-light);
+    --off-canvas-padding: 20px;
+    --off-canvas-link-color: #85bef4;
+    --off-canvas-border-color: #fff;
+    --off-canvas-wrapper-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+    --off-canvas-wrapper-border-color: transparent;
+    --off-canvas-wrapper-border-width: 0;
+    --off-canvas-font-family: sans-serif;
+    --off-canvas-vertical-spacing-unit: 8px;
+    --off-canvas-focus-outline-width: 2px;
+    --off-canvas-focus-outline-color: #fff;
+    --off-canvas-title-padding: 12px;
+    --off-canvas-title-background-color: #777;
+}
+
+html .page-wrapper *:focus,
+html .ui-dialog *:focus,
+html.js.no-touchevents .dropbutton > .dropbutton__item > a,
+html.js.no-touchevents .dropbutton > .dropbutton__item > .button,
+html .dropbutton .dropbutton__item > *:focus,
+html .dropbutton .dropbutton__item > *:focus:hover,
+html .dropbutton__items > .dropbutton__item:first-of-type > *:focus,
+html .dropbutton__items > .dropbutton__item:first-of-type ~ .dropbutton__item > *:focus,
+html .dropbutton__items > .dropbutton__item:first-of-type ~ .dropbutton__item > *:focus:hover,
+html .form-boolean:focus:active,
+html .form-boolean:focus:hover,
+html .cke.cke_chrome.cke_focus,
+html .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus,
+html .form-element:focus,
+html .form-element:hover,
+html .form-element:hover:focus,
+html .form-element.error:hover:focus,
+html .form-actions .action-link:focus,
+html .paragraphs-tabs-wrapper .field-multiple-table .draggable.drag,
+html .layout-paragraphs-field .layout-paragraphs-actions input.layout-paragraphs-edit:focus,
+html .layout-paragraphs-field .layout-paragraphs-actions input.layout-paragraphs-remove:focus,
+html .ck .ck.ck-button:active,
+html .ck .ck.ck-button:focus,
+html .ck .ck.ck-button:active:focus,
+html .toolbar-box .toolbar-handle:focus,
+html .field-option.focus,
+html .subfield-option.focus {
+    border-color: transparent !important;
+    box-shadow: 0 0 0 1px var(--gin-color-primary), 0 0 0 0 transparent;
+    outline: none;
+}
+
+.ck {
+    --ck-min-height: 70px;
+}
+
+body.gin-login .user-form-page__wallpaper {
+    background-color: #fff;
+}
+
+.card__image img {
+    max-height: 200px;
+}
+
+.system-themes-list--uninstalled img,
+.system-themes-list--uninstalled .card__content h3 + .card__content-item {
+    display: none;
+}
+
+.card__footer .action-links {
+    text-align: left;
+}
+
+.card__footer .action-link {
+    background: var(--gin-bg-item-hover);
+}
+
+.card__footer .action-link:hover {
+    background: var(--gin-color-primary);
+    color: #fff;
+}
+
+.card__footer .action-link:hover:before {
+    background-color: #fff !important;
+}
+
+html table tr:not(:first-of-type):nth-last-child(2) td .dropbutton__items,
+html table tr:not(:first-of-type):last-of-type td .dropbutton__items {
+    bottom: initial;
+}
+
+.toolbar .toolbar-bar a.toolbar-icon-course-admin:before {
+    -webkit-mask-image: url(../../../../themes/contrib/gin/dist/media/sprite.svg#extend-new-view);
+    mask-image: url(../../../../themes/contrib/gin/dist/media/sprite.svg#extend-new-view);
+}
+
+.toolbar .toolbar-bar a.toolbar-icon-quiz-admin:before {
+    -webkit-mask-image: url(../../../../themes/contrib/gin/dist/media/sprite.svg#local-tasks-view);
+    mask-image: url(../../../../themes/contrib/gin/dist/media/sprite.svg#local-tasks-view);
+}
+
+.toolbar .toolbar-bar a.toolbar-icon-certificate-admin:before {
+    -webkit-mask-image: url(../../../../themes/contrib/gin/dist/media/sprite.svg#bookmarks-view);
+    mask-image: url(../../../../themes/contrib/gin/dist/media/sprite.svg#bookmarks-view);
+}
+
+.toolbar-horizontal .toolbar-tray .menu-item a:focus {
+    box-shadow: none !important;
+}
+
+.toolbar-horizontal .toolbar-tray .menu-item a.is-active {
+    background-color: var(--gin-bg-item-hover);
+}
+
+
+.ui-dialog.ui-widget-content {
+    max-height: 90vh !important;
+    width: 1280px !important;
+    max-width: 100% !important;
+    overflow: auto;
+    top: 5% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+/* AJAX Loader */
+/***************/
+
+
+.ajax-progress {
+    position: fixed;
+    z-index: 501;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: rgba(255, 255, 255, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.throbber {
+    width: 170px !important;
+    height: 170px !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200' id='__lottie_element_2'%3E%3Crect width='200' height='200' x='0' y='0'%3E%3C/rect%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23__lottie_element_2)'%3E%3Cg style='display: none;'%3E%3Cg%3E%3Cpath stroke-linecap='round' stroke-linejoin='miter' fill-opacity='0' stroke-miterlimit='4'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3Cg style='display: block;' transform='matrix(-1.841196060180664,0.781022846698761,-0.781022846698761,-1.841196060180664,100,100)' opacity='1'%3E%3Cg opacity='1' transform='matrix(1,0,0,1,0,0)'%3E%3Cpath stroke-linecap='round' stroke-linejoin='miter' fill-opacity='0' stroke-miterlimit='4' stroke='rgb(4,149,216)' stroke-opacity='1' stroke-width='6' d='M0 0'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3Cg style='display: block;' transform='matrix(-1.8411225080490112,0.7811962962150574,-0.7811962962150574,-1.8411225080490112,100,100)' opacity='1'%3E%3Cg opacity='1' transform='matrix(1,0,0,1,0,0)'%3E%3Cpath stroke-linecap='round' stroke-linejoin='miter' fill-opacity='0' stroke-miterlimit='4' stroke='rgb(4,149,216)' stroke-opacity='1' stroke-width='6' d='M0 0'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3Cg style='display: block;' transform='matrix(-1.580215573310852,1.2259358167648315,-1.2259358167648315,-1.580215573310852,100,100)' opacity='1'%3E%3Cg opacity='1' transform='matrix(1,0,0,1,0,0)'%3E%3Cpath stroke-linecap='round' stroke-linejoin='miter' fill-opacity='0' stroke-miterlimit='4' stroke='rgb(23,43,129)' stroke-opacity='1' stroke-width='6' d=' M8.666000366210938,-25.57699966430664 C19.32200050354004,-21.961999893188477 27,-11.869999885559082 27,0 C27,14.901300430297852 14.901300430297852,27 0,27 C-3.1080000400543213,27 -6.09499979019165,26.474000930786133 -8.875,25.5049991607666'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: 120px !important;
+    animation: loading-spinner 1s linear infinite;
+}
+
+@keyframes loading-spinner {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+/* Media Library */
+/*****************/
+
+@media screen and (min-width: 35em) {
+    .media-library-item--grid {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 50em) {
+    .media-library-item--grid {
+        width: 33.3%;
+    }
+}
+
+@media screen and (min-width: 65em) {
+    .media-library-item--grid {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 80em) {
+    .media-library-item--grid {
+        width: 20%;
+    }
+
+    .media-library-item__attributes {
+        position: absolute;
+        background-color: #fff;
+        width: calc(100% - 1rem);
+        opacity: 0;
+    }
+
+    .media-library-item--grid:hover .media-library-item__attributes {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 95em) {
+    .media-library-item--grid {
+        width: 14.28%;
+    }
+}
+
+@media screen and (min-width: 110em) {
+    .media-library-item--grid {
+        width: 12.5%;
+    }
+}
+
+@media screen and (min-width: 125em) {
+    .media-library-item--grid {
+        width: 10%;
+    }
+}
+
+.media-library-item__click-to-select-checkbox .form-boolean {
+    width: 21px;
+    height: 21px;
+}
+
+.media-library-edit__link,
+.media-library-edit__link:hover,
+.media-library-edit__link:focus,
+.media-library-edit__link:active,
+.media-library-item .media-library-item__edit,
+.media-library-item .media-library-item__edit:hover,
+.media-library-item .media-library-item__edit:focus,
+.media-library-item .media-library-item__edit:active,
+.media-library-item .media-library-item__remove,
+.media-library-item .media-library-item__remove:hover,
+.media-library-item .media-library-item__remove:focus,
+.media-library-item .media-library-item__remove:active,
+.media-library-item .media-library-item__remove.button,
+.media-library-item .media-library-item__remove.button:hover,
+.media-library-item .media-library-item__remove.button:focus,
+.media-library-item .media-library-item__remove.button:active {
+    width: 26px;
+    height: 26px;
+}
+
+[dir="ltr"] .media-library-edit__link,
+[dir="ltr"] .media-library-item .media-library-item__edit {
+    right: 2.5rem;
+}
+
+.media-library-item__preview {
+    transition-duration: .3s;
+}
+
+.media-library-item.is-hover .media-library-item__preview {
+    border: none;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    transition-duration: 0ms;
+}
+
+.field-group-html-element .media-library-selection .media-library-item--grid {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Media Content */
+/*****************/
+
+.media-oembed-content {
+    width: 100%;
+    height: auto;
+}
+
+/* Text Filter */
+/***************/
+
+.filter-wrapper {
+    display: none;
+}
+
+/* Admin Stuff */
+/***************/
+
+.field-plugin-settings-edit {
+    width: initial;
+}
+
+/* Gin Login */
+/*************/
+
+body.gin-login .user-form-page,
+body.gin-login .user-form-page * {
+    font-family: "Open Sans", sans-serif;
+}
+
+body.gin-login .user-form-page .content-header {
+    padding-top: 7vmax;
+}
+
+body.gin-login .user-form-page .content-header,
+body.gin-login .user-form-page .layout-container > main > * {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+}
+
+body.gin-login .user-form-page__wallpaper {
+    order: 1;
+}
+
+body.gin-login .user-form-page__user-form img.toolbar-icon-home {
+    max-height: 50px;
+}
+
+body.gin-login .user-form-page__wallpaper img {
+    top: initial;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    height: 80vh;
+    max-height: 777px;
+    width: auto;
+}
+
+body.gin-login .user-form-page .layout-container {
+    margin: 0 auto 0 0 !important;
+}
+
+@media (min-width: 800px) {
+    body.gin-login .user-form-page .layout-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (min-width: 800px) and (orientation: portrait) {
+    body.gin-login .user-form-page__wallpaper {
+        display: none;
+    }
+
+    body.gin-login .user-form-page__user-form {
+        flex-basis: 100%;
+    }
+
+    body.gin-login .user-form-page .layout-container {
+        margin: 0 auto !important;
+    }
+}
+
+body.gin-login .user-form-page__user-form {
+    order: 2;
+    background-color: rgba(255, 255, 255, .9);
+    z-index: 9999999;
+}
+
+body.gin-login .user-form-page__user-form label {
+    font-weight: 400;
+    position: initial;
+}
+
+body.gin-login .user-form-page__user-form .forgot-password {
+    display: none;
+}
+
+/* Quiz Qusestions */
+/*******************/
+
+details .add-questions {
+    line-height: 2em;
+}
+
+/* IMCE */
+/********/
+.imce-filefield-link {
+    display: inline-block;
+    margin-bottom: 1em;
+    font-size: var(--font-size-xs);
+}
+
+.imce-filefield-link::before {
+    background-color: var(--gin-icon-color);
+    background-image: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    -webkit-mask-image: url(../../../../themes/contrib/gin/dist/media/sprite.svg#search-view);
+    mask-image: url(../../../../themes/contrib/gin/dist/media/sprite.svg#search-view);
+    mask-size: var(--gin-icon-size-toolbar) var(--gin-icon-size-toolbar);
+    mask-repeat: no-repeat;
+}
+
+
+.gin--dark-mode .form-text {
+    color: inherit;
+}
+
+.dropbutton--multiple > .dropbutton__item:first-of-type input {
+    border-radius: 0;
+}
+
+
+html.js.no-touchevents .dropbutton > .dropbutton__item:first-of-type > .button {
+    box-shadow: none;
+    text-align: center;
+}
+
+.dropbutton-wrapper .dropbutton-widget ul {
+    padding-left: inherit;
+}
+
+.gin-table-scroll-wrapper .permissions thead {
+    top: 0;
+}
+
+.user-admin-permissions .permissions-table-filter {
+    margin-bottom: 1rem;
+}
+
+.gin-node-edit-form .button {
+    color: var(--gin-color-primary) !important;
+}
+
+
+.page-wrapper .region-sticky__items .placeholder {
+    background-color: transparent;
+}
+
+.page-wrapper .form-item__description .placeholder {
+    background-color: transparent;
+}
+
+.gin--classic-toolbar .page-wrapper__node-edit-form .region-sticky {
+    top: 0;
+}
+
+body.gin--dark-mode .page-wrapper .page-content .button.button--extrasmall, .page-wrapper .page-content .button.button--small {
+    padding: var(--gin-spacing-m) var(--gin-spacing-m) !important;
+    color: var(--gin-color-button-text) !important;
+}
+
+body.gin--dark-mode .page-wrapper .page-content .button.button--extrasmall:hover, .page-wrapper .page-content .button.button--small:hover {
+    padding: var(--gin-spacing-m) var(--gin-spacing-m) !important;
+    color: var(--gin-color-button-text) !important;
+}
+.page-wrapper .page-content .button.button--extrasmall, .page-wrapper .page-content .button.button--small {
+    padding: var(--gin-spacing-m) var(--gin-spacing-m) !important;
+    color: var(--gin-color-primary) !important;
+}
+
+.page-wrapper .page-content .button.form-submit {
+    padding: var(--gin-spacing-m) var(--gin-spacing-m);
+}
+
+[dir="ltr"] .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before {
+    background-image: none !important;
+}
+
+.gin--dark-mode .webform-ui-elements-table tr.webform-ui-element-disabled {
+    background-color: transparent;
+}
+
+.gin--classic-toolbar .position-sticky thead {
+    position: static;
+}
+
+.gin--dark-mode .autocomplete-deluxe-container {
+    background-color: var(--gin-bg-input);
+}
+
+.gin--dark-mode .autocomplete-deluxe-container input.autocomplete-deluxe-form {
+    background: transparent !important;
+}

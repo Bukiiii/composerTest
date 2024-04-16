@@ -1,0 +1,25 @@
+{
+    "name": "dhtpublic/dht_gin_custom",
+    "type": "drupal-module",
+    "description": "DHT Gin Custom Styles",
+    "keywords": ["drupal","gin"],
+    "homepage": "https://d-ht.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthias Froschmeier",
+            "email": "m.froschmeier@d-ht.com",
+            "homepage": "https://d-ht.com/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "drupal/gin": "^3.0@RC",
+        "php": ">=8.1.0"
+    },
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://gitlab.crusoe.media/packages/dht_gin_custom/-/issues",
+        "source": "https://gitlab.crusoe.media/packages/dht_gin_custom"
+    }
+}

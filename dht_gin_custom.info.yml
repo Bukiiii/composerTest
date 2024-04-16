@@ -1,0 +1,6 @@
+name: 'DHT Gin custom'
+type: module
+description: 'Adds a library to gin theme'
+package: DHT
+core_version_requirement: ^10
+

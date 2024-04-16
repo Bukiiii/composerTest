@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for DHT Gin custom module.
+ */
+
+/**
+ * Implements hook_page_attachments()
+ */
+function dht_gin_custom_page_attachments(array &$attachments) {
+
+  $attachments['#attached']['library'][] = 'dht_gin_custom/gin_custom';
+
+}

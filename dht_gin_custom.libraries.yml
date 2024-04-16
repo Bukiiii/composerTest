@@ -1,0 +1,4 @@
+gin_custom:
+  css:
+    component:
+      css/gin-custom.css: {}
